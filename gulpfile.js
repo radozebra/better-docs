@@ -1,5 +1,5 @@
 const DOCS_COMMAND = process.env.DOCS_COMMAND || 'yarn docs'
-const DOCS_OUTPUT = process.env.DOCS_OUTPUT || '../docs'
+const DOCS_OUTPUT = process.env.DOCS_OUTPUT || './docs'
 
 const gulp = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
@@ -33,7 +33,7 @@ gulp.task('js', () =>
     .pipe(gulp.dest('static/scripts'))
 )
 
-gulp.task('docs', (cb) => exec(`cd .. && ${DOCS_COMMAND}`, cb))
+gulp.task('docs', (cb) => exec(`${DOCS_COMMAND}`, cb))
 
 gulp.task('watch', function () {
   gulp.watch('styles/**/*.sass', gulp.series(['sass', 'docs']))
