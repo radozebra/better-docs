@@ -1,6 +1,6 @@
 {
-  "name": "better-docs",
-  "version": "2.7.2",
+  "name": "@zebrabi/better-docs",
+  "version": "2.7.3",
   "description": "JSdoc theme",
   "repository": "github:SoftwareBrothers/better-docs",
   "main": "publish.js",
@@ -10,6 +10,9 @@
     "build": "babel src --out-dir lib",
     "docs": "jsdoc -c jsdoc.json",
     "release": "semantic-release"
+  },
+  "publishConfig": {
+    "registry": "http://18.184.246.41:4873/"
   },
   "author": "Wojciech Krysiak",
   "license": "MIT",
